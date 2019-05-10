@@ -1,0 +1,44 @@
+<div class="row" id="registerCard">
+    <div class="col s6 offset-s3">
+      <div class="card">
+        <div class="row">
+            <div class="col s12 offset-s8">
+                <img src="/assets/img/logo.png" style="width:120px;height:120px" alt="quizImage">
+            </div>  
+            <div class="col s12" style="margin:20px">
+                <h4>Procom Quiz Registration</h4>
+                <p>Welcome to the exciting world of Procom Quiz show. You will be presented with five questions.
+                    You are expected to attempt all of the questions.The final score
+                    can be viewed once all the questions have been answered.Remember there is no negative marking.</p>
+              </div>
+        </div>
+        
+        <div class="card-content">
+            <form #registerForm = "ngForm" (submit)="onSubmit(Name.value,Email.value)">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input type="text" name="Name" #Name ngModel required>
+                  <label>Name</label>
+              </div>
+              </div>                        
+  
+              <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">mail_outline</i>
+                    <input type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
+                    <label>Email</label>
+                  </div>
+                </div>                        
+  
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start Quiz</button>
+                    </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
