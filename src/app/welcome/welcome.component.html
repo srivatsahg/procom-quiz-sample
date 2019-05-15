@@ -1,5 +1,5 @@
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col s6 offset-s3">
         <div class="card">
           <div class="row">
@@ -27,3 +27,61 @@
       </div>
     </div>
     
+
+    <div class="card col-8 mx-auto" style="background-color:lightblue">
+      <div class="row">
+        <h3 class="card-header col-4 mx-auto">Procom Quiz Sample</h3>
+        <img src="/assets/img/logo.png" style="width:90px;height:90px" alt="quizImage">
+      </div>
+      <hr>
+      <div class="card-title">
+        <div>
+          <p>Welcome to the exciting world of Procom Quiz show. You will be presented with five questions.
+            You are expected to attempt all of the questions.The final score
+            can be viewed once all the questions have been answered.Remember there is no negative marking.</p>
+        </div>
+    </div>
+
+      <div class="card-body">
+        <form #registerForm = "ngForm" (submit)="onSubmit()">
+          <div class="row">
+              <div class="input-field col s3">
+                  <button class="btn-large btn-submit" type="submit">Register <i class="material-icons right">send</i></button>
+              </div>
+            </div>
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+        Procom©
+      </div>
+    </div>
+   
+
+    <div class="card border-info mx-8" style="max-width: 60rem;">
+      <div class="card-header">
+        <div class="row">
+            <h4 class="card-title col-10">Procom Online Quiz</h4>
+            <img class="image-thumbnail" src="/assets/img/logo.png" style="width:64px;height:64px" alt="quizImage">
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Welcome to the exciting world of Procom Quiz show. You will be presented with five questions.
+          You are expected to attempt all of the questions.The final score
+          can be viewed once all the questions have been answered.Remember there is no negative marking.</p>
+          <button type="button" class="btn btn-primary"><i class="material-icons right"></i> Register</button>
+      </div>
+      <div class="card-footer text-muted">
+          Procom Technologies ©
+      </div>
+    </div> -->
+
+
+    <div class="jumbotron">
+        <h1 class="display-3">Procom Online Quiz</h1>
+        <p class="lead">Welcome to the exciting world of Procom Quiz show. You will be presented with five questions.
+            You are expected to attempt all of the questions.The final score can be viewed once all the questions have been answered.Remember there is no negative marking.</p>
+        <hr class="my-4">
+        <p class="lead">
+          <button class="btn btn-primary btn-lg" (click)="onSubmit()" role="button">Register</button>
+        </p>
+      </div>

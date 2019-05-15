@@ -1,4 +1,4 @@
-<div class="row" id="registerCard">
+<!-- <div class="row" id="registerCard">
     <div class="col s6 offset-s3">
       <div class="card">
         <div class="row">
@@ -41,4 +41,52 @@
       </div>
     </div>
   </div>
-  
+   -->
+
+   <div class="jumbotron">
+      <h1 class="display-3">Quiz Registration</h1>
+
+      <form #registerForm = "ngForm" (submit)="onSubmit(Name.value,Email.value)">
+          <!-- <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" name="Name" #Name ngModel required>
+              <label>Name</label>
+          </div>
+          </div>                        
+
+          <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
+                <label>Email</label>
+              </div>
+            </div>                        
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start Quiz</button>
+                </div>
+              </div> -->
+
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" 
+                id="exampleInputAccountName" placeholder="Enter name"
+                name="Name" #Name ngModel required>
+          </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" 
+                aria-describedby="emailHelp" placeholder="Enter email"
+                  name="Email" #Email ngModel required [pattern]="emailPattern">
+        </div>
+        
+      <hr class="my-4">
+      <p class="lead">
+        <button class="btn btn-primary btn-lg" [disabled]="!registerForm.valid" role="button">Start Quiz</button>
+      </p>
+    </form>
+    </div>
